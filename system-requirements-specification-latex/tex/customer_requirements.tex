@@ -1,32 +1,359 @@
-Include a header paragraph specific to your product here. Customer requirements are those required features and functions specified for and by the intended audience for this product. This section establishes, clearly and concisely, the "look and feel" of the product, what each potential end-user should expect the product do and/or not do. Each requirement specified in this section is associated with a specific customer need that will be satisfied. In general Customer Requirements are the directly observable features and functions of the product that will be encountered by its users. Requirements specified in this section are created with, and must not be changed without, specific agreement of the intended customer/user/sponsor.
+Synthify.me will get playlists from a user from each platform, and bring them all together and have the playlists unified under one service. The service will auto-update after a certain amount of time to make sure it's consistent with any playlist changes that the user may have done on the respective platform. The "look and feel" of Synthify.me is similar to Spotifiy's dashboard. Users should expect to listen to music from each platform they have signed up for.
 
 \subsection{Requirement Name}
-\subsubsection{Description}
-A detailed description of the feature/function that satisfies the requirement. For example: \textit{The GUI background will be slate blue. This specific color is required in order to ensure that the GUI matches other similar software products offered by the customer. Slate blue is specified as \#007FFF, using six-digit hexadecimal color specification.} It is acceptable and advisable to include drawings/graphics in the description if it aids understanding of the requirement.
-\subsubsection{Source}
-The source of the requirement (e.g. customer, sponsor, specified team member (by name), federal regulation, local laws, CSE Senior Design project specifications, etc.)
-\subsubsection{Constraints}
-A detailed description of realistic constraints relevant to this requirement. Economic, environmental, social, political, ethical, health \& safety, manufacturability, and sustainability should be discussed as appropriate.
-\subsubsection{Standards}
-A detailed description of any specific standards that apply to this requirement (e.g. \textit{NSTM standard xx.xxx.x. color specifications \cite{Rubin2012}}. Standards exist for practically everything (ATC standard fuses, IEEE 802.15.4 embedded wireless, TLS 1.3 encryption, etc.), so be sure that you research and document which ones will be followed in meeting this requirement.
-\subsubsection{Priority}
-The priority of this requirement relative to other specified requirements. Use the following priorities:
-\begin{itemize}
-\item Critical (must have or product is a failure)
-\item High (very important to customer acceptance, desirability)
-\item Moderate (should have for proper product functionality);
-\item Low (nice to have, will include if time/resource permits)
-\item Future (not feasible in this version of the product, but should be considered for a future release).
-\end{itemize}
 
-\subsection{Requirement Name}
+\subsection{Select a song from a playlist}
 \subsubsection{Description}
-Detailed requirement description...
+The system shall allow a user to select a song from a playlist.
 \subsubsection{Source}
-Source
+Mary Huerta
 \subsubsection{Constraints}
-Detailed description of applicable constraints...
+NA
 \subsubsection{Standards}
-List of applicable standards
+NA
 \subsubsection{Priority}
-Priority
+Critical
+
+
+\subsection{User Signin}
+\subsubsection{Description}
+The user shall authenticate themselves with their credentials i.e. their email and password they signedup up with.
+\subsubsection{Source}
+Mary Huerta
+\subsubsection{Constraints}
+Invalid emails and invalid passwords will be checked. If the user types in an email that does not exist do no let them sign in.
+\subsubsection{Standards}
+NA
+\subsubsection{Priority}
+Critical
+
+
+\subsection{User Signup}
+\subsubsection{Description}
+User shall sign up with their email, a password, any music services they use and their name.
+\subsubsection{Source}
+Mary Huerta
+\subsubsection{Constraints}
+Emails have to have an "@" character and if the email has already been used by another user the system will not let them register as a new user. User must have an email.
+\subsubsection{Standards}
+NA
+\subsubsection{Priority}
+Critical
+
+
+\subsection{Update playlists}
+\subsubsection{Description}
+The system shall utilize AJAX to check if the playlist has changed on the service and get updated playlists after a certain amount of time.
+\subsubsection{Source}
+Mary Huerta
+\subsubsection{Constraints}
+The system can not update playlists by calling of the APIs too frequently or it will be given a 429 status code. Thus there should be a set constraint on how much the system can call any of the APIs. User must be registered to at least one of the services to be shown any playlist.
+\subsubsection{Standards}
+NA
+\subsubsection{Priority}
+Critical
+
+
+\subsection{Show playlists from different services}
+\subsubsection{Description}
+The system shall display playlists from different music services like Youtube, Spotify, and SoundCloud
+\subsubsection{Source}
+Mary Huerta
+\subsubsection{Constraints}
+User must be registered to at least one of the services to be shown any playlist. Users must also have playlists on the services that can be updated and shown.
+\subsubsection{Standards}
+NA
+\subsubsection{Priority}
+High
+
+
+
+\subsection{Search for songs}
+\subsubsection{Description}
+The system shall allow users to search for songs in their playlists. 
+\subsubsection{Source}
+Mary Huerta
+\subsubsection{Constraints}
+User must be registered to at least one of the services to be shown any playlist. If there is no song that matches the search terms then the user will be shown a message that they're term didn't match a song.
+\subsubsection{Standards}
+NA
+\subsubsection{Priority}
+High
+
+
+
+\subsection{Change the volume}
+\subsubsection{Description}
+The system shall allow users to change the volume of the song they are listening to
+\subsubsection{Source}
+Mary Huerta
+\subsubsection{Constraints}
+If the system is playing a song it must change the volume dynamically. If the system isn't playing a song the next song played will have the volume the user requested. Speakers/Headphones are required to hear differences in volume.
+\subsubsection{Standards}
+NA
+\subsubsection{Priority}
+Critical
+
+
+
+\subsection{The system shall play a song }
+\subsubsection{Description}
+The song shall be streamed from a URL 
+\subsubsection{Source}
+Kolten Sturgill
+\subsubsection{Constraints}
+NA
+\subsubsection{Standards}
+NA
+\subsubsection{Priority}
+Critical
+
+
+
+\subsection{Replay Songs}
+\subsubsection{Description}
+The system shall allow users to replay a song.
+\subsubsection{Source}
+Mary Huerta
+\subsubsection{Constraints}
+If the system isn't playing a song the next song played will be repeated. 
+\subsubsection{Standards}
+NA
+\subsubsection{Priority}
+low
+
+
+
+\subsection{Add music service}
+\subsubsection{Description}
+The system shall allow users to add music services (Youtube Music, Spotify, Soundcloud) to their account.
+\subsubsection{Source}
+Mary Huerta
+\subsubsection{Constraints}
+Users must have an account with the music service before adding a service to their Synthify.me account.
+\subsubsection{Standards}
+NA
+\subsubsection{Priority}
+Critical
+
+
+
+\subsection{Display current Song Title}
+\subsubsection{Description}
+The system shall display the current song title the user is listening to.
+\subsubsection{Source}
+Mary Huerta
+\subsubsection{Constraints}
+If the system isn't playing a song no song title will be displayed. 
+\subsubsection{Standards}
+NA
+\subsubsection{Priority}
+High
+
+
+
+\subsection{Display current Song Time}
+\subsubsection{Description}
+The system shall display the time within current song the user is listening to.
+\subsubsection{Source}
+Mary Huerta
+\subsubsection{Constraints}
+If the system isn't playing a song no song Time will be displayed. If the system is paused on the song then that song's time will be displayed. 
+\subsubsection{Standards}
+NA
+\subsubsection{Priority}
+High
+
+
+
+\subsection{Storing user preferences}
+\subsubsection{Description}
+The system shall store users local preferences
+\subsubsection{Source}
+Kolten Sturgill
+\subsubsection{Constraints}
+NA
+\subsubsection{Standards}
+NA
+\subsubsection{Priority}
+High
+
+
+
+\subsection{Playing a Next Song}
+\subsubsection{Description}
+The system shall consecutively play another song after the previous song has ended.
+\subsubsection{Source}
+Mary Huerta
+\subsubsection{Constraints}
+NA
+\subsubsection{Standards}
+NA
+\subsubsection{Priority}
+High
+
+
+
+\subsection{Storing user searches}
+\subsubsection{Description}
+The system shall store each query the user makes
+\subsubsection{Source}
+Kolten Sturgill
+\subsubsection{Constraints}
+NA
+\subsubsection{Standards}
+NA
+\subsubsection{Priority}
+High
+
+
+
+
+\subsection{Searching for previous user searches}
+\subsubsection{Description}
+The system shall check previously made user searches for similar results in order to preserve crtical API access.
+\subsubsection{Source}
+Kolten Sturgill
+\subsubsection{Constraints}
+NA
+\subsubsection{Standards}
+NA
+\subsubsection{Priority}
+Low
+
+
+
+\subsection{Next song shuffled}
+\subsubsection{Description}
+The system shall play random song in the playlist if the the previous song has ended if the user has selected shuffle mode.
+\subsubsection{Source}
+Mary Huerta
+\subsubsection{Constraints}
+The next song that will be played will be based upon whether the user has selected shuffle in-order or shuffle.
+\subsubsection{Standards}
+NA
+\subsubsection{Priority}
+High
+
+
+
+\subsection{Next song non-shuffled}
+\subsubsection{Description}
+The system shall play a song inorder from the current playlist if the the previous song has ended if the user has selected in-order mode
+\subsubsection{Source}
+Mary Huerta
+\subsubsection{Constraints}
+The next song that will be played will be based upon whether the user has selected shuffle inorder or shuffle.
+\subsubsection{Standards}
+NA
+\subsubsection{Priority}
+High
+
+
+
+\subsection{User Sign Out}
+\subsubsection{Description}
+User shall be able to sign out of their account.
+\subsubsection{Source}
+Mitchel Smith
+\subsubsection{Constraints}
+NA
+\subsubsection{Standards}
+NA
+\subsubsection{Priority}
+Critical
+
+
+
+
+\subsection{Previous song}
+\subsubsection{Description}
+The system shall play the previously played song
+\subsubsection{Source}
+Mitchel Smith
+\subsubsection{Constraints}
+NA
+\subsubsection{Standards}
+NA
+\subsubsection{Priority}
+High
+
+
+
+
+\subsection{Store previously played songs}
+\subsubsection{Description}
+The system shall store the previously played songs of the user's current session.
+\subsubsection{Source}
+Mitchel Smith
+\subsubsection{Constraints}
+NA
+\subsubsection{Standards}
+NA
+\subsubsection{Priority}
+High
+
+\subsection{Repeat Playlist}
+\subsubsection{Description}
+The system shall repeat the playlist if the repeat button is selected 
+\subsubsection{Source}
+Mitchel Smith
+\subsubsection{Constraints}
+NA
+\subsubsection{Standards}
+NA
+\subsubsection{Priority}
+Medium
+
+
+\subsection{Repeat Song}
+\subsubsection{Description}
+The system shall repeat the song if the repeat song button is selected 
+\subsubsection{Source}
+Mitchel Smith
+\subsubsection{Constraints}
+NA
+\subsubsection{Standards}
+NA
+\subsubsection{Priority}
+Medium
+
+
+\subsection{Display album artwork}
+\subsubsection{Description}
+The system shall display the album artwork of the currently playing song.
+\subsubsection{Source}
+Mitchel Smith
+\subsubsection{Constraints}
+NA
+\subsubsection{Standards}
+NA
+\subsubsection{Priority}
+Low
+
+
+\subsection{Stop song}
+\subsubsection{Description}
+The user shall be able to stop the currently playing song
+\subsubsection{Source}
+Mitchel Smith
+\subsubsection{Constraints}
+NA
+\subsubsection{Standards}
+NA
+\subsubsection{Priority}
+Critical
+
+
+\subsection{Play song}
+\subsubsection{Description}
+The user shall be able to start the current song if it is stopped
+\subsubsection{Source}
+Mitchel Smith
+\subsubsection{Constraints}
+NA
+\subsubsection{Standards}
+NA
+\subsubsection{Priority}
+Critical
+
